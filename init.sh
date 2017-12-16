@@ -46,6 +46,7 @@ sudo mkdir -p /var/www/github.com/ibbd-dev
 sudo chown -R $username:$username /var/www
 git config --global user.email "cyy0523xc@gmail.com"
 git config --global user.name "Alex Cai"
+git config --global push.default simple
 
 
 # 创建ssh key
