@@ -4,7 +4,9 @@
 # @author Alex Cai
 # 
 
+# 配置
 email="cyy0523xc@gmail.com"
+
 if [ ! -d ~/.ssh ]; then
     echo "请先生成ssh key，并将key保存到github上。生成命令如下："
     echo "ssh-keygen -t rsa -b 4096 -C \"$email\""
@@ -16,7 +18,6 @@ git clone git@github.com:cyy0523xc/md2html
 git clone git@github.com:cyy0523xc/code
 git clone git@github.com:cyy0523xc/dict_build
 cd -
-
 
 cd /var/www/github.com/ibbd
 git clone git@github.com:IBBD/dev-vim

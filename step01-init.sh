@@ -6,6 +6,7 @@
 
 # 用户名
 username=`whoami`
+email='cyy0523xc@gmail.com'
 
 # install基础软件
 sudo apt install -y git \
@@ -44,14 +45,14 @@ sudo mkdir -p /var/www/github.com/cyy0523xc
 sudo mkdir -p /var/www/github.com/ibbd
 sudo mkdir -p /var/www/github.com/ibbd-dev
 sudo chown -R $username:$username /var/www
-git config --global user.email "cyy0523xc@gmail.com"
-git config --global user.name "Alex Cai"
+git config --global user.email "$email"
+git config --global user.name "$username"
 git config --global push.default simple
 
 
 # 创建ssh key
 echo "创建ssh key的命令："
-echo "ssh-keygen -t rsa -b 4096 -C \"cyy0523xc@gmail.com\""
+echo "ssh-keygen -t rsa -b 4096 -C \"$email\""
 echo "将key加到github.com和git.ibbd.net上"
 
 echo "Init end."
