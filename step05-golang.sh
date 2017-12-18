@@ -69,17 +69,36 @@ else
     exit 1
 fi
 
+bashrc=/etc/bash.bashrc
+zshrc=/etc/zsh/zshenv
 set_env() {
-    echo "$1" | sudo tee -a /etc/bash.bashrc
-    echo "$1" | sudo tee -a /etc/zsh/zshenv
+    # 设置环境变量
+    if [ -f "$bashrc" ]; then
+        # bash shell
+        if 
+            grep "$1" "$bashrc";
+        then
+            echo "$1: config had in $bashrc"
+            exit 1
+        fi
+        echo "$1" | sudo tee -a "$bashrc"
+    fi
+    if [ -f "$zshrc" ]; then
+        # zsh shell
+        if 
+            grep "$1" "$zshrc";
+        then
+            echo "$1: config had in $zshrc"
+            exit 1
+        fi
+        echo "$1" | sudo tee -a "$zshrc"
+    fi
 }
 
 
 # 配置GOPATH  配置PATH
 # 这些配置最好启动时自动加载了
-# vim /etc/profile
-bashrc=/etc/profile
-zshrc=/etc/zsh/zshenv
+# vim /etc/bash.bashrc
 if [ "$GOROOT" = "$goroot" ]; then
     echo "The config of go path is ok!"
 else
