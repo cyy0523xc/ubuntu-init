@@ -25,6 +25,10 @@ if [ ! -d $gopath/go-go$base ]; then
     if [ ! -f $gopath/go$base.zip ]; then
         echo "从github上下载文件，可能比较耗时"
         wget https://github.com/golang/go/archive/go$base.zip
+        if [ $? -ne 0 ]; then
+            echo "Error: wget https://github.com/golang/go/archive/go$base.zip"
+            exit 1
+        fi
     fi
     unzip go$base.zip
     cd go-go$base/src
@@ -51,6 +55,10 @@ cd $gopath
 if [ ! -f go$version.zip ]; then
     echo "从github上下载文件，可能比较耗时"
     wget https://github.com/golang/go/archive/go$version.zip
+    if [ $? -ne 0 ]; then
+        echo "Error: wget https://github.com/golang/go/archive/go$version.zip"
+        exit 1
+    fi
 fi
 if [ ! -d go-go$version ]; then
     unzip go$version.zip
