@@ -40,10 +40,10 @@ sudo apt-get install -y pinta
 
 # 配置
 echo "Begin config..."
-sudo mkdir -p /var/www/git.ibbd.net
-sudo mkdir -p /var/www/github.com/cyy0523xc
-sudo mkdir -p /var/www/github.com/ibbd
-sudo mkdir -p /var/www/github.com/ibbd-dev
+sudo mkdir -p /var/www/src/git.ibbd.net
+sudo mkdir -p /var/www/src/github.com/cyy0523xc
+sudo mkdir -p /var/www/src/github.com/ibbd
+sudo mkdir -p /var/www/src/github.com/ibbd-dev
 sudo chown -R $username:$username /var/www
 git config --global user.email "$email"
 git config --global user.name "$username"

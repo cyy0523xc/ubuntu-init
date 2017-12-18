@@ -13,13 +13,13 @@ if [ ! -d ~/.ssh ]; then
     exit 1
 fi
 
-cd /var/www/github.com/cyy0523xc
+cd /var/www/github.com/src/cyy0523xc
 git clone git@github.com:cyy0523xc/md2html
 git clone git@github.com:cyy0523xc/code
 git clone git@github.com:cyy0523xc/dict_build
 cd -
 
-cd /var/www/github.com/ibbd
+cd /var/www/src/github.com/ibbd
 git clone git@github.com:IBBD/dev-vim
 git clone git@github.com:IBBD/dockerfile-dgraph
 git clone git@github.com:IBBD/dockerfile-spacy
@@ -32,7 +32,7 @@ git clone git@github.com:IBBD/dockerfile-php7-fpm
 git clone git@github.com:IBBD/IBBD.github.io
 cd -
 
-cd /var/www/github.com/ibbd-dev
+cd /var/www/src/github.com/ibbd-dev
 git clone git@github.com:ibbd-dev/ibbdETL
 git clone git@github.com:ibbd-dev/TextGrocery
 cd -
