@@ -10,12 +10,16 @@ email='cyy0523xc@gmail.com'
 
 # install基础软件
 sudo apt install -y git \
-    vim \
+    vim vim-gnome \
     zsh \
     jq \
     rar \
     curl \
+    htop \
+    zeal \
+    tmux \
     guake \
+    nload \
     terminator \
     silversearcher-ag \
     chromium-browser \
