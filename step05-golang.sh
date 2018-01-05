@@ -107,6 +107,7 @@ set_env() {
 # 配置GOPATH  配置PATH
 # 这些配置最好启动时自动加载了
 # vim /etc/bash.bashrc
+# vim /etc/zsh/zshenv
 if [ "$GOROOT" = "$goroot" ]; then
     echo "The config of go path is ok!"
 else
@@ -114,7 +115,7 @@ else
     set_env "# golang$version config. date: "`date`
     set_env "export GOROOT=$goroot"
     set_env "export GOPATH=/var/www"
-    set_env "export PATH=$path:\$PATH"
+    set_env "export PATH=/var/www/bin/:$path:\$PATH"
     echo "往文件$bashrc 和 $zshrc加入了内容"
 fi
 
