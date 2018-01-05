@@ -6,6 +6,7 @@
 
 output=./config/hosts-output
 if 
+    echo "[提示]密码使用姓名和QQ号相关的："
     openssl aes-128-cbc -d -salt -in ./config/hosts -out "$output"
 then
     sudo mv "$output" /etc/hosts
