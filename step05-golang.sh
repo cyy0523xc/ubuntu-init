@@ -127,6 +127,8 @@ git clone https://github.com/golang/text
 git clone https://github.com/golang/crypto
 
 # vim-go
+go get github.com/klauspost/asmfmt/cmd/asmfmt
+go get github.com/alecthomas/gometalinter
 go get golang.org/x/tools/cmd/guru
 go get golang.org/x/tools/cmd/goimports
 go get golang.org/x/tools/cmd/gorename
