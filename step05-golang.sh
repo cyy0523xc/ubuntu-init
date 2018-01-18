@@ -125,6 +125,7 @@ cd /var/www/src/golang.org/x/
 git clone https://github.com/golang/tools
 git clone https://github.com/golang/text
 git clone https://github.com/golang/crypto
+git clone https://github.com/golang/net
 
 # vim-go
 go get golang.org/x/tools/cmd/guru
