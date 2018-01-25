@@ -143,6 +143,10 @@ go get github.com/josharian/impl
 go get github.com/fatih/gomodifytags
 go get github.com/dominikh/go-tools/cmd/keyify
 
+# 常用的golang package
+go get github.com/spf13/cobra
+go get github.com/go-sql-driver/mysql
+
 echo "ok"
 echo "查看go版本的命令：go version"
 echo "查看相关环境变量：go env"
