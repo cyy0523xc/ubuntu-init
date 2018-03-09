@@ -126,6 +126,7 @@ git clone https://github.com/golang/tools
 git clone https://github.com/golang/text
 git clone https://github.com/golang/crypto
 git clone https://github.com/golang/net
+git clone https://github.com/golang/sys
 
 # vim-go
 go get github.com/klauspost/asmfmt/cmd/asmfmt
