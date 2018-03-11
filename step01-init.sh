@@ -12,7 +12,6 @@ email='cyy0523xc@gmail.com'
 # install基础软件
 sudo apt install -y git \
     vim vim-gnome \
-    zsh \
     jq \
     rar \
     curl \
@@ -28,6 +27,12 @@ sudo apt install -y git \
     ca-certificates \
     software-properties-common \
     openssh-server
+
+# install zsh
+sudo apt install -y zsh
+git clone git://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
+cp ~/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc
+chsh -s $(which zsh)
 
 # install docker
 echo "install docker, pinta ..."
@@ -63,8 +68,5 @@ sudo hostname $hostname
 echo "创建ssh key的命令："
 echo "ssh-keygen -t rsa -b 4096 -C \"$email\""
 echo "将key加到github.com和git.ibbd.net上"
-if [ ! -d ~/.ssh ]; then
-    ssh-keygen -t rsa -b 4096 -C "$email"
-fi
 
 echo "Init end."
