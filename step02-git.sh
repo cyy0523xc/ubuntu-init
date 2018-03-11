@@ -20,6 +20,11 @@ git-clone() {
         mkdir -p "$project"
     fi
 
+    if [ -d "$project/$2" ]; then
+        echo "$project/$2 is exist."
+        return
+    fi
+
     cd "$project"
     if 
         git clone "git@github.com:$1/$2"
