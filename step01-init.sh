@@ -68,5 +68,5 @@ sudo hostname $hostname
 echo "创建ssh key的命令："
 echo "ssh-keygen -t rsa -b 4096 -C \"$email\""
 echo "将key加到github.com和git.ibbd.net上"
+echo "也可以将 ./config/ssh.20180311.zip 文件解压到相应目录下，密码使用名字与QQ号相关的。"
 
-echo "Init end."

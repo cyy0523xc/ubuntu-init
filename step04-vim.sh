@@ -15,10 +15,21 @@ if [ ! -d /var/www/src/github.com/ibbd ]; then
     fi
 fi
 
+install() {
+    if 
+        $*
+    then
+        echo "Install $2 ok."
+    else
+        echo "Install $2 error."
+        exit 1
+    fi
+}
+
 cd /var/www/src/github.com/ibbd/dev-vim
-bash install-YoucompleteMe.sh
-bash install.sh
-bash install-color.sh
+install bash install-YoucompleteMe.sh
+install bash install.sh
+install bash install-color.sh
 
 cd -
 echo "install ok."
