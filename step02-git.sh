@@ -13,38 +13,40 @@ if [ ! -d ~/.ssh ]; then
     exit 1
 fi
 
-if [ ! -d /var/www/src/github.com/cyy0523xc ]; then
-    mkdir -p /var/www/src/github.com/cyy0523xc
-fi
+path=/var/www/src/github.com
+git-clone() {
+    project="$path/$1"
+    if [ ! -d "$project" ]; then
+        mkdir -p "$project"
+    fi
 
-cd /var/www/src/github.com/cyy0523xc
-git clone git@github.com:cyy0523xc/md2html
-git clone git@github.com:cyy0523xc/code
-git clone git@github.com:cyy0523xc/dict_build
-cd -
+    cd "$project"
+    if 
+        git clone "git@github.com:$1/$2"
+    then
+        echo "git clone git@github.com:$1/$2   => ok"
+    else
+        echo "git clone git@github.com:$1/$2   => error"
+        exit 1
+    fi
+}
 
-if [ ! -d /var/www/src/github.com/ibbd ]; then
-    mkdir -p /var/www/src/github.com/ibbd
-fi
-cd /var/www/src/github.com/ibbd
-git clone git@github.com:IBBD/dev-vim
-git clone git@github.com:IBBD/dockerfile-dgraph
-git clone git@github.com:IBBD/dockerfile-spacy
-git clone git@github.com:IBBD/dockerfile-node
-git clone git@github.com:IBBD/dockerfile-elk
-git clone git@github.com:IBBD/dockerfile-mariadb
-git clone git@github.com:IBBD/dockerfile-nginx
-git clone git@github.com:IBBD/dockerfile-php-fpm
-git clone git@github.com:IBBD/dockerfile-php7-fpm
-git clone git@github.com:IBBD/IBBD.github.io
-cd -
+git-clone cyy0523xc md2html
+git-clone cyy0523xc code
+git-clone cyy0523xc dict_build
 
-if [ ! -d /var/www/src/github.com/ibbd-dev ]; then
-    mkdir -p /var/www/src/github.com/ibbd-dev
-fi
-cd /var/www/src/github.com/ibbd-dev
-git clone git@github.com:ibbd-dev/ibbdETL
-git clone git@github.com:ibbd-dev/TextGrocery
-cd -
+git-clone ibbd dev-vim
+git-clone ibbd dockerfile-dgraph
+git-clone ibbd dockerfile-spacy
+git-clone ibbd dockerfile-node
+git-clone ibbd dockerfile-elk
+git-clone ibbd dockerfile-mariadb
+git-clone ibbd dockerfile-nginx
+git-clone ibbd dockerfile-php-fpm
+git-clone ibbd dockerfile-php7-fpm
+git-clone ibbd IBBD.github.io
+
+git-clone ibbd-dev ibbdETL
+git-clone ibbd-dev TextGrocery
 
 echo 'ok'
