@@ -35,17 +35,9 @@ cp ~/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc
 chsh -s $(which zsh)
 
 # install docker
-echo "install docker, pinta ..."
-curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
-sudo apt-key fingerprint 0EBFCD88
-sudo add-apt-repository \
-   "deb [arch=amd64] https://download.docker.com/linux/ubuntu \
-   $(lsb_release -cs) \
-   stable"
+echo "install pinta ..."
 sudo add-apt-repository ppa:pinta-maintainers/pinta-stable
-
 sudo apt-get update -y
-sudo apt-get install -y docker-ce
 sudo apt-get install -y pinta
 
 # 配置
