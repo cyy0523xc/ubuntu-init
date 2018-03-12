@@ -28,3 +28,11 @@ src/
                 util.go
 ```
 
+## Golang跨平台编译镜像
+
+```sh
+docker pull karalabe/xgo-latest
+```
+
+
+
