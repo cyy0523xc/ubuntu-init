@@ -41,6 +41,7 @@ go get github.com/fatih/gomodifytags
 go get github.com/dominikh/go-tools/cmd/keyify
 
 # 常用的golang package
+go get github.com/gin-gonic/gin
 go get github.com/spf13/cobra
 go get github.com/go-sql-driver/mysql
 
