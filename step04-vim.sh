@@ -2,6 +2,8 @@
 # 
 # 
 
+# ctags
+sudo apt-get install exuberant-ctags 
 
 if [ ! -d /var/www/src/github.com/ibbd ]; then
     mkdir -p /var/www/src/github.com/ibbd
