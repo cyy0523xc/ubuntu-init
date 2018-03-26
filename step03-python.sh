@@ -11,4 +11,6 @@ sudo -H pip3 install -U pip \
     pandas \
     jieba \
     scipy \
-    nltk
+    nltk \
+    sphinx \
+    sphinx_rtd_theme

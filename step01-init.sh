@@ -26,7 +26,8 @@ sudo apt install -y git \
     apt-transport-https \
     ca-certificates \
     software-properties-common \
-    openssh-server
+    openssh-server \
+    pandoc
 
 # install zsh
 sudo apt install -y zsh
