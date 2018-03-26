@@ -14,4 +14,6 @@ sudo -H pip3 install -U pip \
     nltk \
     sphinx \
     sphinx_rtd_theme \
-    Cython
+    Cython \
+    flask flask_restful
+
