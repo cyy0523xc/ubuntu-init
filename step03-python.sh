@@ -13,4 +13,5 @@ sudo -H pip3 install -U pip \
     scipy \
     nltk \
     sphinx \
-    sphinx_rtd_theme
+    sphinx_rtd_theme \
+    Cython
