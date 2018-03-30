@@ -6,6 +6,7 @@
 
 sudo apt-get install -y ipython3 python3-pip
 
+# fire: 命令行工具
 sudo -H pip3 install -U pip \
     numpy \
     pandas \
@@ -15,5 +16,8 @@ sudo -H pip3 install -U pip \
     sphinx \
     sphinx_rtd_theme \
     Cython \
-    flask flask_restful
+    flask flask_restful \
+    fire
 
+echo "请手动安装以下工具："
+echo "使用sql查询csv: https://github.com/harelba/q"
