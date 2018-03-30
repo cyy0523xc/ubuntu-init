@@ -45,6 +45,11 @@ go get github.com/gin-gonic/gin
 go get github.com/spf13/cobra
 go get github.com/go-sql-driver/mysql
 
+# 使用sql来查询csv文件，例如
+# textql -sql "select * from tbl" -source some_file.csv
+# 简写为：textql -sql "*" some_file.csv
+go get -u github.com/dinedal/textql/...
+
 echo "ok"
 echo "查看go版本的命令：go version"
 echo "查看相关环境变量：go env"
