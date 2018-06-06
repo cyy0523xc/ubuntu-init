@@ -27,7 +27,8 @@ sudo apt install -y git \
     ca-certificates \
     software-properties-common \
     openssh-server \
-    pandoc
+    pandoc \
+    trash-cli
 
 # install zsh
 sudo apt install -y zsh
@@ -51,6 +52,27 @@ sudo chown -R $username:$username /var/www
 git config --global user.email "$email"
 git config --global user.name "$username"
 git config --global push.default simple
+
+# 配置bashrc
+if [ -f ~/.bashrc ]; then
+    if 
+        cat ~/.bashrc|grep "alias rm='rm -i'"
+    then
+        echo "\"alias rm='rm -i'\" is ok"
+    else
+        echo "# 给rm命令增加确认" >> ~/.bashrc
+        echo "alias rm='rm -i'" >> ~/.bashrc
+    fi
+
+    if 
+        cat ~/.zshrc|grep "alias rm='rm -i'"
+    then
+        echo "\"alias rm='rm -i'\" is ok"
+    else
+        echo "# 给rm命令增加确认" >> ~/.zshrc
+        echo "alias rm='rm -i'" >> ~/.zshrc
+    fi
+fi
 
 # 修改hostname
 echo "修改hostname"
