@@ -48,7 +48,11 @@ go get github.com/go-sql-driver/mysql
 # 使用sql来查询csv文件，例如
 # textql -sql "select * from tbl" -source some_file.csv
 # 简写为：textql -sql "*" some_file.csv
-go get -u github.com/dinedal/textql/...
+# sql查询csv工具改用：http://harelba.github.io/q/install.html
+#go get -u github.com/dinedal/textql/...
+
+# 交互式命令行
+go get -u github.com/d4l3k/go-pry
 
 echo "ok"
 echo "查看go版本的命令：go version"
