@@ -21,7 +21,8 @@ sudo -H pip install -U pip \
     sphinx_rtd_theme \
     Cython \
     flask flask_restful \
-    fire
+    fire \
+    pyinstaller 
 
 echo "请手动安装以下工具："
 echo "使用sql查询csv: https://github.com/harelba/q"
