@@ -5,14 +5,33 @@
 # Created Time: 2017年12月17日 星期日 00时13分13秒
 
 # install 最新版本Python
-version=3.6.6
-sudo aptitude -y install gcc make zlib1g-dev
-wget https://www.python.org/ftp/python/$version/Python-$version.tar.xz
-tar xJf Python-$version.tar.xz
-cd Python-$version
-./configure
-make
-make install
+update=0
+if which python3; then
+    if 
+        python3 -V|grep 3.6
+    then
+        echo "python3.6 is install."
+    elif 
+        python3 -V|grep 3.5
+    then
+        echo "python3.5 is install."
+    else
+        update=1
+    fi
+else 
+    update=1
+fi
+
+if [ $update = 1 ]; then
+    version=3.6.6
+    sudo aptitude -y install gcc make zlib1g-dev
+    wget https://www.python.org/ftp/python/$version/Python-$version.tar.xz
+    tar xJf Python-$version.tar.xz
+    cd Python-$version
+    ./configure
+    make
+    make install
+fi
 
 # which python3
 v_msg=`python3 -V`
